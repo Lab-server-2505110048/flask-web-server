@@ -1,4 +1,3 @@
-
 # ============================================================
 # server.py
 # Aplikasi Web Server Sederhana berbasis Python Flask
@@ -23,10 +22,11 @@ APP_PORT = 5000
 # Fungsi untuk mengumpulkan informasi perangkat server
 def get_server_info():
     if os.name == "nt":
+        windows = sys.getwindowsversion()
         os_release = (
-            f"{sys.getwindowsversion().major}."
-            f"{sys.getwindowsversion().minor}."
-            f"{sys.getwindowsversion().build}"
+            f"{windows.major}."
+            f"{windows.minor}."
+            f"{windows.build}"
         )
         operating_system = "Windows"
     else:
@@ -102,7 +102,7 @@ def index():
 
     <body>
         <div class="card">
-            <h1>Flask Web Server Aktif</h1>
+            <h1>Flask Web Server Aktif - 2505110048 (Organization Fork)</h1>
             <p>Aplikasi berjalan dengan baik pada perangkat berikut:</p>
 
             <table>
